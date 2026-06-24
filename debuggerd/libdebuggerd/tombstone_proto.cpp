@@ -874,6 +874,7 @@ void engrave_tombstone_proto(Tombstone* tombstone, unwindstack::AndroidUnwinder*
   } else {
     result.set_guest_arch(Architecture::NONE);
   }
+  result.set_elyra_version(android::base::GetProperty("ro.elyra.version", "unknown"));
   result.set_lineage_version(android::base::GetProperty("ro.lineage.version", "unknown"));
   result.set_build_fingerprint(android::base::GetProperty("ro.build.fingerprint", "unknown"));
   result.set_revision(android::base::GetProperty("ro.revision", "unknown"));

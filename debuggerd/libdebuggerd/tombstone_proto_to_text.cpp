@@ -632,6 +632,7 @@ static void print_guest_thread(CallbackType callback, SymbolizeCallbackType symb
 bool tombstone_proto_to_text(const Tombstone& tombstone, CallbackType callback,
                              SymbolizeCallbackType symbolize) {
   CBL("*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***");
+  CBL("ElyraOS Version: '%s'", tombstone.elyra_version().c_str());
   CBL("LineageOS Version: '%s'", tombstone.lineage_version().c_str());
   CBL("Build fingerprint: '%s'", tombstone.build_fingerprint().c_str());
   if (!tombstone.kernel_release().empty()) {

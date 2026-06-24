@@ -1,0 +1,18 @@
+ElyraOS system/core setup summary
+==================================
+
+Repository target : ElyraOS-Project/android_system_core
+Source path       : system/core
+Base             : LineageOS/AOSP system/core
+
+Applied changes:
+- Added ElyraOS documentation.
+- Added ElyraOS tombstone version field.
+- Kept existing LineageOS tombstone version field for compatibility.
+- Added a validation script to detect remaining LineageOS/ElyraOS markers.
+
+Safety notes:
+- No init boot flow was changed.
+- No fs_mgr/adb/fastboot behavior was changed.
+- No SELinux policy was modified in this repository.
+- Changes are intentionally small to keep rebase from LineageOS easier.
